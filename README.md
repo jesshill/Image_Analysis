@@ -7,3 +7,4 @@
 **Authors:**
 - Jessica Hill
 - Andrew Moore
+- Erin Nishimura
