@@ -57,7 +57,8 @@ class UserIn:
             file.write(f"{self.date}\n")
             file.write("Comments: \n\
 *---* \n\
-Laser Settings: \n\
+Microscope Settings: \n\
+Objective used: \n\
 \n\
 FITC: \n\
 exposure: \n\
