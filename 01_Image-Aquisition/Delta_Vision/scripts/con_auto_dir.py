@@ -59,11 +59,19 @@ class UserIn:
 *---* \n\
 Laser Settings: \n\
 \n\
-405: \n\
+FITC: \n\
 exposure: \n\
 intensity: \n\
 \n\
-561: \n\
+mCherry: \n\
+exposure: \n\
+intensity: \n\
+\n\
+Cy5: \n\
+exposure: \n\
+intensity: \n\
+\n\
+POL: \n\
 exposure: \n\
 intensity: \n\
 *---*\n\n")
