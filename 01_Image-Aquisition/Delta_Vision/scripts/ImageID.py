@@ -1,6 +1,6 @@
 class ImageID:
     def __init__(self):
-        self._PATH = "/Users/jessicahill/Desktop/bactoFISH/stable_txts/img_id.txt"
+        self._PATH = "/Users/jessicahill/Desktop/bactoFISH/img_id.txt"
         with open(self._PATH, "r") as f:
             for line in f:
                 self._CURR = line
