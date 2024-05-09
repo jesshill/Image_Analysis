@@ -10,16 +10,26 @@ import ij.plugin.RGBStackMerge;
 import java.awt.*;
 
 /** This plugin implements the Edit/Selection/Straighten command. */
-public class Straightener_CONFOCAL implements PlugIn {
+public class Straightener_V2 implements PlugIn {
 	static boolean processStack;
 	static boolean secretSauce;
 
  	public void run(String arg) {
+		GenericDialog gendg = new GenericDialog("Display Range");
+		int min = 0;
+		int max = 65535;
+		gendg.addNumericField("Display Range Minimum: ", min);
+		gendg.addNumericField("Diplay Range Maximum: ", max);
+		gendg.showDialog();
+		min = (int)gendg.getNextNumber();
+		max = (int)gendg.getNextNumber();
+		System.out.println(min);
+		System.out.println(max);
 		ImagePlus imp = IJ.getImage();
 		
 		for (int i = 0; i < imp.getNChannels(); i++){
 			imp.setC(i+1);
-			imp.setDisplayRange(0,65535);
+			imp.setDisplayRange(min,max);
 			imp.updateChannelAndDraw();
 		}
 		Roi roi = imp.getRoi();
